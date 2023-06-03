@@ -2,13 +2,17 @@
 
 Read and write to a Google Cloud Storage bucket over FTP.
 
-This repo defines a docker container that runs vsftpd and gcsfuse to mount a Google Cloud Storage bucket at an FTP server's root directory. It also includes deploy scripts to run the container on Google Compute Engine.
+This repo defines a docker container that runs [vsftpd](https://security.appspot.com/vsftpd.html) and [gcs-fuse](https://cloud.google.com/storage/docs/gcs-fuse) to mount a Google Cloud Storage bucket at an FTP server's root directory. It also includes deploy scripts to run the container on Google Compute Engine.
 
 ## Requirements
 
-A Google Cloud Services account will billing enabled and some experience running cloud infrastructure.
+A Google Cloud Services account with billing enabled and some experience running cloud infrastructure.
 
-As of May 2023, the resources defined here will cost approximately $14/month, but prices may be different now.
+As of May 2023, the resources defined here will cost approximately $14/month, but prices may vary.
+
+## Usage
+
+This was written to serve as part of a [camera-to-cloud pipeline](https://strickles.photos/blog/shooting-concerts-to-the-cloud-may-30th-2023), to allow photographers using cameras with FTP support to shoot directly to an FTP server that will automatically import images into Adobe Lightroom.
 
 ## Startup scripts
 
